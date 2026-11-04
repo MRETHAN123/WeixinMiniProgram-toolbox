@@ -1,0 +1,165 @@
+page {
+  background-color: #f7f8fa;
+}
+
+.container {
+  padding: 30rpx;
+}
+
+/* 添加区域卡片 */
+.add-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  margin-bottom: 40rpx;
+}
+
+.input-row {
+  margin-bottom: 24rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+  padding-bottom: 10rpx;
+}
+
+.input-text {
+  font-size: 32rpx;
+  color: #333;
+  height: 60rpx;
+}
+
+.picker-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.value {
+  font-size: 30rpx;
+  color: #1989fa;
+  font-weight: bold;
+}
+
+.btn-add {
+  background: #1989fa;
+  color: #fff;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  font-weight: bold;
+}
+
+.btn-add:active {
+  opacity: 0.9;
+}
+
+/* 列表区域 */
+.section-title {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+}
+
+.todo-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.02);
+  position: relative;
+}
+
+.item-left {
+  flex: 1;
+}
+
+.item-title {
+  font-size: 34rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+
+.item-date {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.item-right {
+  display: flex;
+  align-items: center;
+}
+
+/* 倒计时数字块 */
+.days-box {
+  background: #e3f2fd; /* 默认浅蓝 */
+  padding: 10rpx 20rpx;
+  border-radius: 12rpx;
+  text-align: center;
+  margin-right: 20rpx;
+}
+
+/* 紧急状态（少于3天）变红 */
+.days-box.urgent {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.days-num {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1989fa;
+}
+
+.days-box.urgent .days-num {
+  color: #d32f2f;
+}
+
+.days-unit {
+  font-size: 22rpx;
+  margin-left: 4rpx;
+}
+
+/* 删除按钮 */
+.delete-btn {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 45rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: #ccc;
+  font-size: 36rpx;
+}
+
+.delete-btn:active {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+/* 空状态 */
+.empty-tip {
+  text-align: center;
+  margin-top: 100rpx;
+  color: #ccc;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-img {
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  opacity: 0.3;
+}

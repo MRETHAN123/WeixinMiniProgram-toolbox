@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="header">
+    <view class="title">美好生活 ✨</view>
+    <view class="subtitle">记录当下的每一刻</view>
+  </view>
+
+  <!-- === 轮播图区域 === -->
+  <view class="swiper-box">
+    <swiper 
+      indicator-dots="{{true}}" 
+      autoplay="{{true}}" 
+      interval="{{4000}}" 
+      duration="{{800}}" 
+      circular="{{true}}"
+      indicator-active-color="#fff"
+      indicator-color="rgba(255,255,255,0.5)"
+    >
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item>
+          <view class="swiper-item-wrap">
+            <!-- 图片 -->
+            <image src="{{item.url}}" class="slide-image" mode="aspectFill"></image>
+            <!-- 文字遮罩 (渐变黑背景，防止白字看不清) -->
+            <view class="slide-text">{{item.text}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- ================= -->
+
+  <!-- 入口卡片列表 -->
+  <view class="card-list">
+    
+    <!-- 1. 待办事项卡片 -->
+    <view class="nav-card todo-card" bindtap="navigateTo" data-url="/pages/life/todo/todo">
+      <view class="card-content">
+        <view class="card-title">📝 待办清单</view>
+        <view class="card-desc">管理任务，倒计时重要日子</view>
+      </view>
+      <view class="card-icon">📌</view>
+    </view>
+
+    <!-- 2. 心情日记卡片 -->
+    <view class="nav-card diary-card" bindtap="navigateTo" data-url="/pages/life/diary/diary">
+      <view class="card-content">
+        <view class="card-title">📒 心情日记</view>
+        <view class="card-desc">写下今天的所见所想</view>
+      </view>
+      <view class="card-icon">🖊️</view>
+    </view>
+
+  </view>
+</view>

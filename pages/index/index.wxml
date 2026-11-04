@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 顶部欢迎区 -->
+  <view class="header">
+    <view class="title">智汇工具箱 🛠️</view>
+    <view class="subtitle">让生活更简单的实用小助手</view>
+  </view>
+
+  <!-- === 推荐轮播图 === -->
+  <view class="swiper-box">
+    <swiper 
+      indicator-dots="{{true}}" 
+      autoplay="{{true}}" 
+      interval="{{4000}}" 
+      duration="{{500}}" 
+      circular="{{true}}"
+      indicator-active-color="#1989fa"
+      indicator-color="rgba(255,255,255,0.6)"
+    >
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item bindtap="onBannerTap" data-url="{{item.url}}">
+          <view class="swiper-item-wrap">
+            <image src="{{item.img}}" class="slide-image" mode="aspectFill"></image>
+            <view class="slide-text">{{item.title}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- ================= -->
+
+  <!-- 工具九宫格区域 -->
+  <view class="grid-card">
+    <view class="grid-item" wx:for="{{tools}}" wx:key="id" bindtap="onGridTap" data-url="{{item.url}}">
+      <view class="icon-box" style="background-color: {{item.color}};">
+        <text class="emoji">{{item.icon}}</text>
+      </view>
+      <text class="label">{{item.name}}</text>
+    </view>
+  </view>
+</view>

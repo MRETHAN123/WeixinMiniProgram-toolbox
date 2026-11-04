@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/life/life",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/tools/bmi/bmi",
+    "pages/tools/finance/finance",
+    "pages/tools/unit/unit",
+    "pages/tools/timer/timer",
+    "pages/tools/magnifier/magnifier",
+    "pages/tools/clock/clock", 
+    "pages/life/todo/todo",
+    "pages/life/diary/diary"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1989fa",
+    "navigationBarTitleText": "智汇工具箱",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7d7e80",
+    "selectedColor": "#1989fa",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活",
+        "iconPath": "images/tabbar/life.png",
+        "selectedIconPath": "images/tabbar/life-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "工具",
+        "iconPath": "images/tabbar/tools.png",
+        "selectedIconPath": "images/tabbar/tools-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mine-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

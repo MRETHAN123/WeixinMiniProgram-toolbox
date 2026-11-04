@@ -1,0 +1,64 @@
+page {
+  height: 100%;
+  background-color: #000;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 相机占满剩余空间 */
+.camera-view {
+  flex: 1;
+  width: 100%;
+}
+
+/* 底部控制栏 */
+.control-bar {
+  height: 200rpx;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  justify-content: space-between;
+}
+
+.slider-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+
+.slider-box slider {
+  flex: 1;
+  margin: 0 20rpx;
+}
+
+.label, .value {
+  color: #fff;
+  font-size: 28rpx;
+  width: 60rpx;
+  text-align: center;
+}
+
+/* 手电筒按钮 */
+.flash-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+}
+
+.icon {
+  font-size: 40rpx;
+  margin-bottom: 6rpx;
+}
+
+.text {
+  font-size: 22rpx;
+  color: #ccc;
+}

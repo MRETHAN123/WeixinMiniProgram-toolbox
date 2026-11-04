@@ -1,0 +1,17 @@
+<view class="container">
+  <!-- 时间 -->
+  <view class="time-area">
+    <text class="time">{{timeStr}}</text>
+  </view>
+
+  <!-- 日期和星期 -->
+  <view class="date-area">
+    <text class="date">{{dateStr}}</text>
+    <text class="week">{{weekStr}}</text>
+  </view>
+
+  <!-- 底部提示 -->
+  <view class="tips">
+    <text>⚡ 屏幕常亮模式已开启</text>
+  </view>
+</view>

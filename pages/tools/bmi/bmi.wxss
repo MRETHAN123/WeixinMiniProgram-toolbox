@@ -1,0 +1,109 @@
+/* 页面背景 */
+page {
+  background-color: #f7f8fa;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40rpx;
+  border-left: 8rpx solid #1989fa;
+  padding-left: 20rpx;
+}
+
+/* 输入框组 */
+.input-group {
+  margin-bottom: 30rpx;
+}
+
+.label {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.input {
+  background: #f5f6f8;
+  height: 88rpx;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+/* 按钮样式 */
+.btn-calc {
+  background: #1989fa;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 16rpx rgba(25, 137, 250, 0.3);
+}
+
+.btn-calc:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+/* 结果区域样式 */
+.result-card {
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.result-title {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.bmi-value {
+  font-size: 80rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 20rpx 0;
+}
+
+.bmi-tag {
+  display: inline-block;
+  padding: 8rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  color: #fff;
+  margin-bottom: 30rpx;
+}
+
+/* 状态颜色 */
+.status-thin { background: #ffb74d; } /* 偏瘦-橙黄 */
+.status-normal { background: #66bb6a; } /* 正常-绿 */
+.status-fat { background: #ef5350; }    /* 偏胖-红 */
+
+.suggestion {
+  background: #f0f9eb;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  font-size: 26rpx;
+  color: #666;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* 简单的淡入动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20rpx); }
+  to { opacity: 1; transform: translateY(0); }
+}

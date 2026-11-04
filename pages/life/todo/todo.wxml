@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 1. 添加任务区域 -->
+  <view class="add-card">
+    <view class="input-row">
+      <input class="input-text" placeholder="输入任务名称 (如: 考研)" value="{{inputTitle}}" bindinput="onTitleInput" />
+    </view>
+    
+    <view class="input-row">
+      <picker mode="date" start="{{today}}" bindchange="onDateChange">
+        <view class="picker-box">
+          <text class="label">目标日期：</text>
+          <text class="value">{{inputDate || '点击选择'}}</text>
+        </view>
+      </picker>
+    </view>
+
+    <button class="btn-add" bindtap="addTodo">添加倒计时任务</button>
+  </view>
+
+  <!-- 2. 任务列表区域 -->
+  <view class="list-area">
+    <view class="section-title" wx:if="{{todoList.length > 0}}">进行中 ({{todoList.length}})</view>
+    
+    <block wx:for="{{todoList}}" wx:key="id">
+      <view class="todo-item">
+        <view class="item-left">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-date">目标日: {{item.date}}</view>
+        </view>
+        
+        <view class="item-right">
+          <view class="days-box {{item.days < 3 ? 'urgent' : ''}}">
+            <text class="days-num">{{item.days}}</text>
+            <text class="days-unit">天</text>
+          </view>
+          <!-- 删除按钮 -->
+          <view class="delete-btn" bindtap="deleteTodo" data-index="{{index}}">×</view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 空状态提示 -->
+    <view class="empty-tip" wx:if="{{todoList.length === 0}}">
+      <image class="empty-img" src="/images/tabbar/life.png" mode="aspectFit"></image>
+      <text>还没有任务，添加一个吧~</text>
+    </view>
+  </view>
+</view>

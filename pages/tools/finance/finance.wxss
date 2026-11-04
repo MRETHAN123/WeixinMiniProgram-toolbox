@@ -1,0 +1,124 @@
+/* 页面背景 */
+page {
+  background-color: #f7f8fa;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片通用样式 */
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40rpx;
+  border-left: 8rpx solid #1989fa;
+  padding-left: 20rpx;
+}
+
+/* 输入框样式 */
+.input-group {
+  margin-bottom: 30rpx;
+}
+
+.label {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+
+.input {
+  background: #f5f6f8;
+  height: 88rpx;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+/* 按钮样式 */
+.btn-calc {
+  background: #1989fa;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 16rpx rgba(25, 137, 250, 0.3);
+}
+
+.btn-calc:active {
+  opacity: 0.9;
+}
+
+/* 结果区域样式 */
+.result-header {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.main-result {
+  text-align: center;
+  margin-bottom: 40rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px dashed #eee;
+}
+
+.main-result .desc {
+  font-size: 26rpx;
+  color: #888;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.main-result .value {
+  font-size: 72rpx;
+  color: #1989fa; /* 重点数字用蓝色 */
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 详情网格 */
+.detail-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-item {
+  text-align: center;
+  width: 48%;
+  background: #f9f9f9;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+}
+
+.detail-label {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.detail-value {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.tips {
+  margin-top: 30rpx;
+  font-size: 22rpx;
+  color: #ccc;
+  text-align: center;
+}

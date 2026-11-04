@@ -1,0 +1,155 @@
+page {
+  background-color: #fef9f5; /* 暖白色背景 */
+}
+
+.container {
+  padding: 30rpx;
+}
+
+/* 写日记卡片 */
+.write-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.05);
+  margin-bottom: 50rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20rpx;
+}
+
+/* 心情选择 */
+.mood-selector {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+  background: #f9f9f9;
+  padding: 10rpx;
+  border-radius: 50rpx;
+}
+
+.mood-item {
+  font-size: 50rpx;
+  padding: 10rpx;
+  border-radius: 50%;
+  transition: all 0.2s;
+  opacity: 0.5;
+  filter: grayscale(100%); /* 默认黑白 */
+}
+
+.mood-item.active {
+  opacity: 1;
+  transform: scale(1.2);
+  filter: grayscale(0%); /* 选中变彩色 */
+  background: #fff;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.1);
+}
+
+/* 输入框 */
+.input-title {
+  height: 80rpx;
+  border-bottom: 2rpx solid #eee;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.input-content {
+  width: 100%;
+  height: 200rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+  background: #fcfcfc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+}
+
+.btn-save {
+  background: #ff9a9e; /* 粉色按钮 */
+  color: #fff;
+  border-radius: 40rpx;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.btn-save:active {
+  background: #ff7e82;
+}
+
+/* 列表区域 */
+.section-header {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+  padding-left: 10rpx;
+}
+
+.diary-item {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.03);
+  border-left: 8rpx solid #ff9a9e; /* 左侧粉线 */
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.item-mood {
+  font-size: 40rpx;
+  margin-right: 16rpx;
+}
+
+.item-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.delete-btn {
+  font-size: 24rpx;
+  color: #ccc;
+  padding: 10rpx;
+}
+
+.item-content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16rpx;
+  /* 限制最多显示3行 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+  overflow: hidden;
+}
+
+.item-date {
+  font-size: 22rpx;
+  color: #bbb;
+  text-align: right;
+}
+
+.empty-tip {
+  text-align: center;
+  color: #ccc;
+  margin-top: 60rpx;
+  font-size: 26rpx;
+}

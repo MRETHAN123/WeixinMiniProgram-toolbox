@@ -1,0 +1,64 @@
+<view class="container">
+  <!-- 1. 顶部切换 -->
+  <view class="tab-header">
+    <view class="tab-item {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="{{0}}">秒表</view>
+    <view class="tab-item {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="{{1}}">倒计时</view>
+  </view>
+
+  <!-- 2. 秒表区域 -->
+  <view class="timer-box" wx:if="{{currentTab === 0}}">
+    <!-- 数字显示 -->
+    <view class="clock-display">
+      <text>{{stopwatchUI.minute}}</text>
+      <text class="colon">:</text>
+      <text>{{stopwatchUI.second}}</text>
+      <text class="colon">.</text>
+      <text class="millisecond">{{stopwatchUI.millisecond}}</text>
+    </view>
+
+    <!-- 按钮 -->
+    <view class="btn-area">
+      <button class="btn btn-reset" bindtap="resetStopwatch">复位</button>
+      <button class="btn {{isRunning ? 'btn-stop' : 'btn-start'}}" bindtap="toggleStopwatch">
+        {{isRunning ? '暂停' : '开始'}}
+      </button>
+    </view>
+  </view>
+
+  <!-- 3. 倒计时区域 -->
+  <view class="timer-box" wx:if="{{currentTab === 1}}">
+    
+    <!-- A. 设定时间 (输入框) -->
+    <view class="input-container" wx:if="{{!isCountDownRunning && !countDownPaused}}">
+      <view class="time-input-group">
+        <input class="time-input" type="number" placeholder="0" bindinput="onHourInput" value="{{inpHour}}" />
+        <text class="time-label">时</text>
+      </view>
+      <view class="time-input-group">
+        <input class="time-input" type="number" placeholder="0" bindinput="onMinInput" value="{{inpMin}}" />
+        <text class="time-label">分</text>
+      </view>
+      <view class="time-input-group">
+        <input class="time-input" type="number" placeholder="0" bindinput="onSecInput" value="{{inpSec}}" />
+        <text class="time-label">秒</text>
+      </view>
+    </view>
+
+    <!-- B. 倒计时显示 -->
+    <view class="clock-display {{countDownFinished ? 'blink' : ''}}" wx:else>
+      <text>{{countDownUI.hour}}</text>
+      <text class="colon">:</text>
+      <text>{{countDownUI.minute}}</text>
+      <text class="colon">:</text>
+      <text>{{countDownUI.second}}</text>
+    </view>
+
+    <!-- C. 按钮 -->
+    <view class="btn-area">
+      <button class="btn btn-reset" bindtap="resetCountDown">重置</button>
+      <button class="btn {{isCountDownRunning ? 'btn-stop' : 'btn-start'}}" bindtap="toggleCountDown">
+        {{isCountDownRunning ? '暂停' : '开始'}}
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 1. 顶部 Tab 切换栏 (现在有5个了) -->
+  <view class="tabs">
+    <view class="tab-item {{activeTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="{{0}}">长度</view>
+    <view class="tab-item {{activeTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="{{1}}">温度</view>
+    <view class="tab-item {{activeTab === 2 ? 'active' : ''}}" bindtap="switchTab" data-index="{{2}}">重量</view>
+    <view class="tab-item {{activeTab === 3 ? 'active' : ''}}" bindtap="switchTab" data-index="{{3}}">体积</view>
+    <view class="tab-item {{activeTab === 4 ? 'active' : ''}}" bindtap="switchTab" data-index="{{4}}">速度</view>
+  </view>
+
+  <!-- 2. 输入区域 -->
+  <view class="input-area">
+    <view class="input-row">
+      <!-- 左侧：选择单位 -->
+      <picker bindchange="onUnitChange" value="{{unitIndex}}" range="{{currentUnits}}">
+        <view class="picker-wrap">
+          <text class="picker-text">{{currentUnits[unitIndex]}}</text>
+          <text class="picker-arrow">▼</text>
+        </view>
+      </picker>
+
+      <!-- 右侧：输入数值 -->
+      <input class="main-input" type="digit" placeholder="输入数值" bindinput="onInput" value="{{inputValue}}" />
+    </view>
+  </view>
+
+  <!-- 3. 结果列表区域 -->
+  <view class="result-list">
+    <view class="result-item" wx:for="{{results}}" wx:key="name">
+      <view class="unit-name">{{item.name}}</view>
+      <view class="unit-value">{{item.value}}</view>
+      <view class="unit-symbol">{{item.unit}}</view>
+    </view>
+  </view>
+  
+  <view class="empty-tip" wx:if="{{results.length === 0}}">
+    👆 选择单位并输入数值
+  </view>
+</view>

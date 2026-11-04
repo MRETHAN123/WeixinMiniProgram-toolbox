@@ -1,0 +1,45 @@
+page { background-color: #f7f8fa; }
+
+/* 顶部 Tab 栏 */
+.tabs {
+  display: flex;
+  background: #fff;
+  padding: 0 10rpx; /* 减小内边距 */
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 26rpx; /* 稍微调小一点字体，确保5个字能排下 */
+  color: #666;
+  position: relative;
+  white-space: nowrap; /* 防止文字换行 */
+}
+
+.tab-item.active { color: #1989fa; font-weight: bold; }
+.tab-item.active::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 40rpx; height: 6rpx; background: #1989fa; border-radius: 3rpx; }
+
+/* 输入区域 */
+.input-area { background: #fff; margin: 24rpx; padding: 30rpx; border-radius: 16rpx; box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05); }
+.input-row { display: flex; align-items: center; justify-content: space-between; }
+
+/* 左侧选择器 */
+.picker-wrap { display: flex; align-items: center; background: #f0f2f5; padding: 16rpx 20rpx; border-radius: 8rpx; min-width: 140rpx; justify-content: space-between; }
+.picker-text { font-size: 28rpx; color: #333; font-weight: bold; }
+.picker-arrow { font-size: 24rpx; color: #999; margin-left: 10rpx; }
+
+/* 右侧输入框 */
+.main-input { flex: 1; text-align: right; font-size: 40rpx; font-weight: bold; color: #333; height: 80rpx; margin-left: 20rpx; border-bottom: 2rpx solid #eee; }
+
+/* 结果列表 */
+.result-list { padding: 0 24rpx 40rpx; }
+.result-item { background: #fff; margin-bottom: 20rpx; padding: 30rpx; border-radius: 12rpx; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.02); }
+.unit-name { font-size: 28rpx; color: #666; width: 160rpx; }
+.unit-value { flex: 1; text-align: right; font-size: 32rpx; color: #333; font-weight: bold; margin-right: 20rpx; }
+.unit-symbol { font-size: 24rpx; color: #999; width: 60rpx; text-align: right; }
+.empty-tip { text-align: center; color: #ccc; font-size: 26rpx; margin-top: 100rpx; }

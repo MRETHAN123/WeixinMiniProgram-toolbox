@@ -1,0 +1,42 @@
+/* 全局引入 Vant 的内置样式变量（可选，为了保险起见先不写，直接写我们自己的） */
+
+page {
+  /* 定义主题色变量，方便统一修改 */
+  --primary-color: #1989fa;
+  --text-color: #323233;
+  --gray-bg: #f7f8fa;
+
+  /* 设置全局背景色：浅灰，比纯白护眼且显高级 */
+  background-color: var(--gray-bg);
+  
+  /* 设置全局字体 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+    
+  /* 字体大小 */
+  font-size: 28rpx;
+  color: var(--text-color);
+  
+  /* 全局盒模型 */
+  box-sizing: border-box;
+}
+
+/* 定义一个通用的卡片样式，以后每个功能块都用这个类名 */
+.card {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 24rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 定义通用标题样式 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 30rpx 24rpx 16rpx;
+  color: #333;
+  border-left: 8rpx solid var(--primary-color);
+  padding-left: 16rpx;
+}

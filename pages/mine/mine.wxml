@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 1. 头部用户信息 -->
+  <view class="header">
+    <view class="user-box">
+      <!-- 这里用一张默认图片做头像 -->
+      <image class="avatar" src="/images/tabbar/mine-active.png" mode="aspectFit"></image>
+      <view class="info">
+        <view class="nickname">微信用户</view>
+        <view class="desc">智汇工具箱，让生活更简单</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 2. 数据统计卡片 (核心亮点：读取其他页面的数据) -->
+  <view class="stats-card">
+    <view class="stats-item">
+      <view class="stats-num">{{todoCount}}</view>
+      <view class="stats-label">待办任务</view>
+    </view>
+    <view class="line"></view>
+    <view class="stats-item">
+      <view class="stats-num">{{diaryCount}}</view>
+      <view class="stats-label">日记篇数</view>
+    </view>
+  </view>
+
+  <!-- 3. 常用功能菜单 -->
+  <view class="menu-list">
+    
+    <view class="menu-item" bindtap="clearCache">
+      <view class="item-left">
+        <text class="icon">🧹</text>
+        <text class="text">清除数据缓存</text>
+      </view>
+      <text class="arrow">></text>
+    </view>
+
+    <view class="menu-item" bindtap="showAbout">
+      <view class="item-left">
+        <text class="icon">👨‍💻</text>
+        <text class="text">关于作者</text>
+      </view>
+      <text class="arrow">></text>
+    </view>
+
+    <view class="menu-item">
+      <view class="item-left">
+        <text class="icon">ℹ️</text>
+        <text class="text">当前版本</text>
+      </view>
+      <text class="version">v1.0.0</text>
+    </view>
+
+  </view>
+</view>

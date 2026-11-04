@@ -1,0 +1,33 @@
+<view class="container">
+  <!-- 相机组件：占满全屏 -->
+  <camera 
+    id="myCamera"
+    mode="normal" 
+    device-position="back" 
+    flash="{{flashState}}" 
+    zoom="{{zoomValue}}"
+    class="camera-view"
+  >
+  </camera>
+
+  <!-- 底部控制栏 -->
+  <view class="control-bar">
+    <view class="slider-box">
+      <text class="label">缩放</text>
+      <slider 
+        min="1.0" max="5.0" step="0.1" 
+        value="{{zoomValue}}" 
+        activeColor="#1989fa" 
+        bindchanging="onZoomChange" 
+        bindchange="onZoomChange"
+      />
+      <text class="value">{{zoomValue}}x</text>
+    </view>
+
+    <!-- 手电筒开关 -->
+    <view class="flash-btn" bindtap="toggleFlash">
+      <text class="icon">{{flashState === 'on' ? '🔦' : '🌑'}}</text>
+      <text class="text">{{flashState === 'on' ? '已开启' : '补光灯'}}</text>
+    </view>
+  </view>
+</view>

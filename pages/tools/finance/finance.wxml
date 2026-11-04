@@ -1,0 +1,50 @@
+<view class="container">
+  <!-- 1. 输入区域 -->
+  <view class="card input-card">
+    <view class="title">房贷计算 (等额本息)</view>
+    
+    <view class="input-group">
+      <text class="label">贷款金额 (万元)</text>
+      <input class="input" type="digit" placeholder="例如：100" bindinput="onAmountInput" />
+    </view>
+    
+    <view class="input-group">
+      <text class="label">贷款年限 (年)</text>
+      <input class="input" type="number" placeholder="例如：30" bindinput="onYearInput" />
+    </view>
+
+    <view class="input-group">
+      <text class="label">年利率 (%)</text>
+      <input class="input" type="digit" placeholder="例如：3.25" bindinput="onRateInput" />
+    </view>
+
+    <button class="btn-calc" bindtap="calculate">开始计算</button>
+  </view>
+
+  <!-- 2. 结果展示区域 -->
+  <view class="card result-card" wx:if="{{monthlyPayment}}">
+    <view class="result-header">计算结果</view>
+    
+    <!-- 核心结果：月供 -->
+    <view class="main-result">
+      <text class="desc">每月应还 (元)</text>
+      <text class="value">{{monthlyPayment}}</text>
+    </view>
+
+    <!-- 详细数据：两列布局 -->
+    <view class="detail-grid">
+      <view class="detail-item">
+        <text class="detail-label">利息总额 (万)</text>
+        <text class="detail-value">{{totalInterest}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">还款总额 (万)</text>
+        <text class="detail-value">{{totalRepay}}</text>
+      </view>
+    </view>
+
+    <view class="tips">
+      *注：此结果仅供参考，实际还款以银行计算为准。
+    </view>
+  </view>
+</view>

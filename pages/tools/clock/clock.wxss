@@ -1,0 +1,62 @@
+page {
+  background-color: #000; /* 纯黑背景，省电且护眼 */
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  height: 100vw;
+  transform: translate(-50%, -50%) rotate(90deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 时间显示 */
+.time-area {
+  /* --- 修改点：适当增加时间与日期的间距 --- */
+  margin-bottom: 60rpx;
+}
+
+.time {
+  /* --- 修改点：将主时间字号从 160rpx 增大到 240rpx --- */
+  font-size: 240rpx;
+  font-weight: bold;
+  color: #00e676;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 4rpx;
+}
+
+/* 日期显示 */
+.date-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* --- 修改点：适当增加日期与底部提示的间距 --- */
+  margin-bottom: 120rpx;
+}
+
+.date {
+  /* --- 修改点：将日期字号从 40rpx 增大到 60rpx --- */
+  font-size: 60rpx;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.week {
+  /* --- 修改点：将星期字号从 36rpx 增大到 50rpx --- */
+  font-size: 50rpx;
+  color: #888;
+}
+
+.tips {
+  position: absolute;
+  bottom: 40rpx;
+  font-size: 24rpx;
+  color: #333;
+}

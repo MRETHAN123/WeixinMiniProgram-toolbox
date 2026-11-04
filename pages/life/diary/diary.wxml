@@ -1,0 +1,56 @@
+<view class="container">
+  <!-- 1. 写日记区域 -->
+  <view class="write-card">
+    <view class="card-title">记录今天的心情</view>
+    
+    <!-- 心情选择器 -->
+    <view class="mood-selector">
+      <view 
+        class="mood-item {{currentMood === '😊' ? 'active' : ''}}" 
+        bindtap="selectMood" data-mood="😊">😊</view>
+      <view 
+        class="mood-item {{currentMood === '😐' ? 'active' : ''}}" 
+        bindtap="selectMood" data-mood="😐">😐</view>
+      <view 
+        class="mood-item {{currentMood === '😔' ? 'active' : ''}}" 
+        bindtap="selectMood" data-mood="😔">😔</view>
+      <view 
+        class="mood-item {{currentMood === '😡' ? 'active' : ''}}" 
+        bindtap="selectMood" data-mood="😡">😡</view>
+      <view 
+        class="mood-item {{currentMood === '🎉' ? 'active' : ''}}" 
+        bindtap="selectMood" data-mood="🎉">🎉</view>
+    </view>
+
+    <!-- 输入区域 -->
+    <input class="input-title" placeholder="取个标题吧..." value="{{title}}" bindinput="onTitleInput" />
+    <textarea class="input-content" placeholder="今天发生了什么故事？" value="{{content}}" bindinput="onContentInput" maxlength="500"></textarea>
+
+    <button class="btn-save" bindtap="saveDiary">保存日记</button>
+  </view>
+
+  <!-- 2. 日记列表区域 -->
+  <view class="list-area">
+    <view class="section-header">历史记录 ({{diaryList.length}})</view>
+
+    <block wx:for="{{diaryList}}" wx:key="id">
+      <view class="diary-item">
+        <view class="item-header">
+          <view class="header-left">
+            <text class="item-mood">{{item.mood}}</text>
+            <text class="item-title">{{item.title}}</text>
+          </view>
+          <view class="delete-btn" bindtap="deleteDiary" data-index="{{index}}">删除</view>
+        </view>
+        
+        <view class="item-content">{{item.content}}</view>
+        <view class="item-date">{{item.time}}</view>
+      </view>
+    </block>
+
+    <!-- 空状态 -->
+    <view class="empty-tip" wx:if="{{diaryList.length === 0}}">
+      <text>📭 还没有日记，写下第一篇吧~</text>
+    </view>
+  </view>
+</view>
